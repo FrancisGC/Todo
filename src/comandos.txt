@@ -1,0 +1,28 @@
+npm run build
+
+npm start
+
+/****************** IMAGENES ***************/
+
+* realizar import del assets, imagenes en un archivo js (por ejemplo index js)
+    ejem. import img from './assets/img-ejemplo.png';
+
+* ejecutar 'webpack' en la linea de comando, este toda la configuracion por defecto de webpack
+
+/***** No hacer eso *****/
+/***** realizar     *****/
+
+* instalar 'npm i copy-webpack-plugin --save-dev'
+
+* importar en 'webpack.config.js'
+    const CopyPlugin = require('copy-webpack-plugin');
+
+* En la pare final 'plugins' agregar
+    new CopyPlugin([
+        {from: 'src/assets', to: 'assets/'}
+    ])
+
+*ejecutar 'npm start'
+*ejecutar 'webpack'
+
+/*******************************************/
